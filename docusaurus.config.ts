@@ -15,6 +15,9 @@ const config: Config = {
     defaultLocale: "zh-TW",
     locales: ["zh-TW"],
   },
+  markdown: {
+    mermaid: true,
+  },
 
   presets: [
     [
@@ -35,7 +38,11 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: "HTS Blog",
+      logo: {
+        alt: "HTS Blog",
+        src: "img/logo.png",
+        srcDark: "img/logo-dark.png",
+      },
       items: [
         {
           href: "https://github.com/Jasonhts0817",
@@ -54,6 +61,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  themes: ["@docusaurus/theme-mermaid"],
 };
 
 export default config;
